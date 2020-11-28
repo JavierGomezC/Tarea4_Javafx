@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestor.canales.CanalController">
+   <children>
+      <TabPane fx:id="tabPanelCanal" layoutY="30.0" prefHeight="322.0" prefWidth="453.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabEntrada" text="Entrada">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="453.0">
+                     <children>
+                        <VBox layoutX="33.0" layoutY="55.0" spacing="15.0">
+                           <children>
+                              <Label layoutX="33.0" layoutY="55.0" text="ID">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="90.0" text="Numero">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="127.0" text="Nombre">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="162.0" text="Categoria">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="199.0" text="Calidad">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="103.0" layoutY="51.0" prefHeight="165.0" prefWidth="311.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="textId" layoutX="103.0" layoutY="51.0" />
+                              <TextField fx:id="textNumero" layoutX="103.0" layoutY="86.0" />
+                              <TextField fx:id="textNombre" layoutX="103.0" layoutY="123.0" />
+                              <TextField fx:id="textCategoria" layoutX="103.0" layoutY="158.0" />
+                              <TextField fx:id="textCalidad" layoutX="103.0" layoutY="195.0" />
+                           </children>
+                        </VBox>
+                        <HBox layoutX="31.0" layoutY="243.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnNuevo" layoutX="33.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnNuevo_click" prefHeight="25.0" prefWidth="78.0" text="Nuevo" />
+                              <Button fx:id="btnGuardo" layoutX="119.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnGuardo_click" prefHeight="25.0" prefWidth="83.0" text="Guardar" />
+                              <Button fx:id="btnEliminar" layoutX="213.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnEliminar_click" prefHeight="25.0" prefWidth="84.0" text="Eliminar" />
+                              <Button fx:id="btnCancelar" layoutX="319.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnCancelar_click" prefHeight="25.0" prefWidth="87.0" text="Cancelar" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabSalida" text="Salida">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="14.0" spacing="5.0">
+                           <children>
+                              <TextField fx:id="textBuscar" layoutX="14.0" layoutY="14.0" onAction="#btnBuscar_click" promptText="Buscar" />
+                              <ChoiceBox fx:id="choiceBuscar" layoutX="173.0" layoutY="14.0" prefHeight="25.0" prefWidth="84.0" />
+                              <Button fx:id="btnBuscar" layoutX="267.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnBuscar_click" text="Buscar" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnRefrescar" layoutX="374.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnRefrescar_click" text="Refrescar" />
+                        <TableView fx:id="tablaCanal" layoutX="14.0" layoutY="47.0" onContextMenuRequested="#contextMenu_click" prefHeight="206.0" prefWidth="427.0">
+                          <columns>
+                            <TableColumn fx:id="colId" prefWidth="39.0" text="Id" />
+                            <TableColumn fx:id="colNumero" prefWidth="62.0" text="Numero" />
+                              <TableColumn fx:id="colNombre" prefWidth="178.0" text="Nombre" />
+                              <TableColumn fx:id="colCategoria" prefWidth="86.0" text="Categoria" />
+                              <TableColumn fx:id="colCalidad" prefWidth="61.0" text="Calidad" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="labResultado" alignment="CENTER_RIGHT" layoutX="299.0" layoutY="262.0" prefHeight="17.0" prefWidth="142.0" text="Resultados 0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

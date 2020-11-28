@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestor.canales.LoginController">
+   <children>
+      <Label layoutX="53.0" layoutY="110.0" text="Usuario" />
+      <Label layoutX="53.0" layoutY="150.0" text="Contraseña" />
+      <TextField fx:id="textUsuario" layoutX="123.0" layoutY="106.0" promptText="Usuario" />
+      <PasswordField fx:id="textPass" layoutX="123.0" layoutY="146.0" promptText="******" />
+      <Label layoutX="97.0" layoutY="45.0" text="Iniciar Sesion">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEntrar" layoutX="123.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnEntrar_click" text="Iniciar Sesion" />
+      <Button fx:id="btnSalir" layoutX="14.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnSalir_click" text="Salir" />
+   </children>
+</AnchorPane>
